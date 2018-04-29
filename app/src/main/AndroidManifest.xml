@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name="su.nosite.smth.quizapp.AddingActivity" />
-        <activity android:name="su.nosite.smth.quizapp.StandartModeActivity"></activity>
+        <activity android:name="su.nosite.smth.quizapp.StandartModeActivity" />
+        <activity android:name="su.nosite.smth.quizapp.quizActivity"></activity>
     </application>
 
 </manifest>
