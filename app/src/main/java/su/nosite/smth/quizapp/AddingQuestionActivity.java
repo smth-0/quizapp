@@ -10,7 +10,7 @@ import android.widget.EditText;
 import su.nosite.smth.waih.R;
 
 
-public class AddingActivity extends AppCompatActivity {
+public class AddingQuestionActivity extends AppCompatActivity {
 
     EditText questionText;
     CheckBox isTrueCheckBox;
@@ -24,7 +24,7 @@ public class AddingActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                QuizSingleton.getInstance().questionList.add(new Question(questionText.getText().toString(),isTrueCheckBox.isChecked()));
+                QuizSingletonStandartMode.getInstance().questionList.add(new Question(questionText.getText().toString(),isTrueCheckBox.isChecked()));
                 finish();
             }
         });

@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="su.nosite.smth.quizapp.AddingActivity" />
+        <activity android:name="su.nosite.smth.quizapp.AddingQuestionActivity" />
         <activity android:name="su.nosite.smth.quizapp.StandartModeActivity" />
-        <activity android:name="su.nosite.smth.quizapp.quizActivity"></activity>
+        <activity android:name="su.nosite.smth.quizapp.QuizActivity"></activity>
     </application>
 
 </manifest>
