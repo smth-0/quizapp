@@ -1,5 +1,3 @@
-
-
 package su.nosite.smth.quizapp;
 
 import android.content.Intent;
@@ -10,13 +8,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Objects;
-
 import su.nosite.smth.waih.R;
 
 public class QuizActivity extends AppCompatActivity {
 
-    Intent intent = getIntent();
+    Intent intent;
 
     private Boolean isStandart;
     private int number;
@@ -30,15 +26,16 @@ public class QuizActivity extends AppCompatActivity {
     private TextView progressText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void
+    onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        intent = getIntent();
         isStandart = intent.getExtras().getBoolean("isStandart");
         number  = intent.getExtras().getInt("i");
-        isQuestionTrue = QuizSingletonStandartMode.getInstance().questionList.get(number).getTrue();
-        isNoQuestions = intent.getExtras().getBoolean("isNoQuestion");
 
+        isNoQuestions = intent.getExtras().getBoolean("isNoQuestion");
 
         questionText = findViewById(R.id.questionTextView);
         trueButton = findViewById(R.id.buttonTrue);
@@ -46,10 +43,18 @@ public class QuizActivity extends AppCompatActivity {
         cheatButton = findViewById(R.id.buttonCheatSkip);
         progressText = findViewById(R.id.progressTextView);
 
-        progressText.setText(number+"/"+ QuizSingletonStandartMode.getInstance().questionList.size());
 
         if(!isNoQuestions) {
+            progressText.setText(number+"/"+ QuizSingletonCustomMode.getInstance().questionList.size());
             final String question = intent.getExtras().getString("keyNumber");
+            isQuestionTrue = QuizSingletonCustomMode.getInstance().questionList.get(number).getTrue();
+
+            if(question.length()<20){
+                questionText.setTextSize(40);
+            } else {
+                questionText.setTextSize(25);
+            }
+
             questionText.setText(question);
             changeClickableOfButtons(true);
         } else {
@@ -106,12 +111,12 @@ public class QuizActivity extends AppCompatActivity {
     private void changeClickableOfButtons(Boolean isTurnOn){
         if(isTurnOn) {
             trueButton.setVisibility(View.VISIBLE);//visible
-            cheatButton.setVisibility(View.VISIBLE);//visible
-            falseButton.setVisibility(View.VISIBLE);//visible
+            cheatButton.setVisibility(View.VISIBLE);
+            falseButton.setVisibility(View.VISIBLE);
         } else {
             trueButton.setVisibility(View.INVISIBLE);//invisible
-            cheatButton.setVisibility(View.INVISIBLE);//invisible
-            falseButton.setVisibility(View.INVISIBLE);//invisible
+            cheatButton.setVisibility(View.INVISIBLE);
+            falseButton.setVisibility(View.INVISIBLE);
         }
     }
 }

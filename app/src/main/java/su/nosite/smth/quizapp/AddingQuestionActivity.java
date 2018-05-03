@@ -24,7 +24,7 @@ public class AddingQuestionActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                QuizSingletonStandartMode.getInstance().questionList.add(new Question(questionText.getText().toString(),isTrueCheckBox.isChecked()));
+                QuizSingletonCustomMode.getInstance().questionList.add(new Question(questionText.getText().toString(),isTrueCheckBox.isChecked()));
                 finish();
             }
         });

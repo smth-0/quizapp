@@ -18,7 +18,8 @@
         </activity>
         <activity android:name="su.nosite.smth.quizapp.AddingQuestionActivity" />
         <activity android:name="su.nosite.smth.quizapp.StandartModeActivity" />
-        <activity android:name="su.nosite.smth.quizapp.QuizActivity"></activity>
+        <activity android:name="su.nosite.smth.quizapp.QuizActivity" />
+        <activity android:name="su.nosite.smth.quizapp.CustomModeActivity"></activity>
     </application>
 
 </manifest>

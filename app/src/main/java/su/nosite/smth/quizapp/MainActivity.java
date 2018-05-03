@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         ratingButton=findViewById(R.id.ratingsButton);
 
         //////delete it after fix
-        customModeButton.setText("coming soon");
+//        customModeButton.setText("coming soon");
         ratingButton.setText("coming soon");
         /////
 
@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        customModeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,CustomModeActivity.class);
+
+                startActivity(intent);
+            }
+        });
 
     }
 
