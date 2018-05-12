@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomModeActivity">
+    tools:context="su.nosite.smth.quizapp.CustomModeActivity">
 
     <TextView
         android:id="@+id/sucOrNoteCustomMode"
@@ -49,7 +49,7 @@
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="Button"
+        android:text="edit mode"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

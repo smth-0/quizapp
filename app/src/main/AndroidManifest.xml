@@ -18,8 +18,13 @@
         </activity>
         <activity android:name="su.nosite.smth.quizapp.AddingQuestionActivity" />
         <activity android:name="su.nosite.smth.quizapp.StandartModeActivity" />
-        <activity android:name="su.nosite.smth.quizapp.QuizActivity" />
-        <activity android:name="su.nosite.smth.quizapp.CustomModeActivity"></activity>
+        <activity android:name="su.nosite.smth.quizapp.CustomModeActivity" />
+        <activity
+            android:name="su.nosite.smth.quizapp.RatingActivity"
+            android:label="@string/title_activity_rating"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="su.nosite.smth.quizapp.QuizStandartActivity" />
+        <activity android:name="su.nosite.smth.quizapp.QuizCustomActivity"></activity>
     </application>
 
 </manifest>

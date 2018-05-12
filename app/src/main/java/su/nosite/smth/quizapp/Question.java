@@ -5,7 +5,8 @@ package su.nosite.smth.quizapp;
  */
 
 public class Question {
-    String q="empty";Boolean True=false;
+    private String q="empty";
+    private Boolean True=false;
 
     public Question(String q, Boolean aTrue) {
         this.q = q;

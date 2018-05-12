@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">what my android?</string>
     <string name="what_android">what android?</string>
+    <string name="title_activity_rating">ratingActivity</string>
 </resources>

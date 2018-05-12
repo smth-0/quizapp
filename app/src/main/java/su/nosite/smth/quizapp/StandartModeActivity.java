@@ -29,7 +29,7 @@ public class StandartModeActivity extends AppCompatActivity {
             Boolean isLastQuestionSuc = AnswersStandartMode.getInstance().answers.get(number);
             nextButton.setText("NEXT QUESTION");
             if(isLastQuestionSuc){
-                sucOrNot.setText("SUCCES");
+                sucOrNot.setText("SUCCESS");
             } else {
                 sucOrNot.setText("FAIL");
             }
@@ -38,16 +38,11 @@ public class StandartModeActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // TODO: this
                 Intent intent = new Intent(StandartModeActivity.this, QuizActivity.class);
-                if(QuizSingletonStandartMode.getInstance().questionList.size()!=0) {
-                    intent.putExtra("keyNumber", QuizSingletonStandartMode.getInstance().questionList.get(number).getQ());
-                    intent.putExtra("isNoQuestion",false);
-                } else {
-                    intent.putExtra("keyNumber", "error");
-                    intent.putExtra("isNoQuestion",true);
-                }
-                intent.putExtra("isStandart",new Boolean(true));
-                intent.putExtra("i",number);
+
+
+
                 startActivity(intent);
             }
         });

@@ -21,10 +21,20 @@ public class AddingQuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adding_question);
 
+        addButton=findViewById(R.id.buttonAddQ);
+        isTrueCheckBox=findViewById(R.id.checkBox);
+        questionText=findViewById(R.id.QText);
+
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                QuizSingletonCustomMode.getInstance().questionList.add(new Question(questionText.getText().toString(),isTrueCheckBox.isChecked()));
+                QuizSingletonCustomMode
+                        .getInstance()
+                        .questionList
+                        .add(
+                                new Question(
+                                        questionText.getText().toString(),
+                                        isTrueCheckBox.isChecked()));
                 finish();
             }
         });
