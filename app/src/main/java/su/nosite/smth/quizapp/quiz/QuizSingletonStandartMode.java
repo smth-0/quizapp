@@ -1,6 +1,8 @@
-package su.nosite.smth.quizapp;
+package su.nosite.smth.quizapp.quiz;
 
 import java.util.ArrayList;
+
+import su.nosite.smth.quizapp.Question;
 
 class QuizSingletonStandartMode {
     private static QuizSingletonStandartMode Instance = null;

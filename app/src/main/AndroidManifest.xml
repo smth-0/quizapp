@@ -16,15 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="su.nosite.smth.quizapp.AddingQuestionActivity" />
-        <activity android:name="su.nosite.smth.quizapp.StandartModeActivity" />
-        <activity android:name="su.nosite.smth.quizapp.CustomModeActivity" />
-        <activity
-            android:name="su.nosite.smth.quizapp.RatingActivity"
-            android:label="@string/title_activity_rating"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="su.nosite.smth.quizapp.QuizStandartActivity" />
-        <activity android:name="su.nosite.smth.quizapp.QuizCustomActivity"></activity>
+
+        <activity android:name="su.nosite.smth.quizapp.quiz.StandartModeActivity" />
+        <activity android:name="su.nosite.smth.quizapp.RatingActivity"/>
+        <activity android:name="su.nosite.smth.quizapp.quiz.QuizStandartActivity" />
+        <activity android:name="su.nosite.smth.quizapp.quiz.ResultActivity" />
+        <activity android:name="su.nosite.smth.quizapp.quiz.AddQuestionActivity" />
     </application>
 
 </manifest>

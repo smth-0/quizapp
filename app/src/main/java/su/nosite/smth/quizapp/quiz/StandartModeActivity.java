@@ -1,4 +1,4 @@
-package su.nosite.smth.quizapp;
+package su.nosite.smth.quizapp.quiz;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import su.nosite.smth.waih.R;
 
 public class StandartModeActivity extends AppCompatActivity {
 
     Button nextButton;
+    Button addButton;
     TextView sucOrNot;
-    int number=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,32 +23,28 @@ public class StandartModeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_standart_mode);
         nextButton=findViewById(R.id.nextButtonStandartMode);
         sucOrNot=findViewById(R.id.sucOrNoteCustomMode);
+        addButton=findViewById(R.id.addbutton);
 
-        if(number==0) {
-            sucOrNot.setText("Are you ready for quiz?");
-            nextButton.setText("START");
-        } else{
-            Boolean isLastQuestionSuc = AnswersStandartMode.getInstance().answers.get(number);
-            nextButton.setText("NEXT QUESTION");
-            if(isLastQuestionSuc){
-                sucOrNot.setText("SUCCESS");
-            } else {
-                sucOrNot.setText("FAIL");
-            }
-        }
-        number++;
+        sucOrNot.setText("Are you ready for quiz?");
+        nextButton.setText("START");
+
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: this
-                Intent intent = new Intent(StandartModeActivity.this, QuizActivity.class);
-
-
-
+                Intent intent = new Intent(StandartModeActivity.this, QuizStandartActivity.class);
                 startActivity(intent);
             }
         });
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StandartModeActivity.this,AddQuestionActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
+    public void onBackPressed() { }
 }

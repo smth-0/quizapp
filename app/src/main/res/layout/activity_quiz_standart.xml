@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="su.nosite.smth.quizapp.QuizStandartActivity">
+    tools:context="su.nosite.smth.quizapp.quiz.QuizStandartActivity">
 
     <TextView
         android:id="@+id/QuestionText"

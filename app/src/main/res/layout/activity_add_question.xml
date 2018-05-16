@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="su.nosite.smth.quizapp.QuizActivity">
+    tools:context="su.nosite.smth.quizapp.quiz.AddQuestionActivity">
 
-    <TextView
-        android:id="@+id/questionTextView"
+    <EditText
+        android:id="@+id/editTextQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -16,16 +16,18 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Question"
-        android:textSize="35dp"
+        android:ems="10"
+        android:hint="type your question here"
+        android:inputType="textPersonName"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353" />
+        app:layout_constraintVertical_bias="0.41000003" />
 
-    <LinearLayout
+    <CheckBox
+        android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -34,44 +36,26 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
+        android:text="is this question true?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionTextView"
-        app:layout_constraintVertical_bias="0.195">
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+        app:layout_constraintVertical_bias="0.060000002" />
 
-        <Button
-            android:id="@+id/buttonTrue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="true" />
-
-        <Button
-            android:id="@+id/buttonCheatSkip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="skip/cheat" />
-
-        <Button
-            android:id="@+id/buttonFalse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="false" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/progressTextView"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="1/25"
-        android:textSize="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="add it!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 </android.support.constraint.ConstraintLayout>

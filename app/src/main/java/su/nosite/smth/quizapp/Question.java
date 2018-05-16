@@ -1,10 +1,12 @@
 package su.nosite.smth.quizapp;
 
+import java.io.Serializable;
+
 /**
  * Created by Mi Notebok on 11.03.2018.
  */
 
-public class Question {
+public class Question implements Serializable{
     private String q="empty";
     private Boolean True=false;
 

@@ -1,4 +1,4 @@
-package su.nosite.smth.quizapp;
+package su.nosite.smth.quizapp.quiz;
 
 import java.util.ArrayList;
 
