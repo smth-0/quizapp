@@ -2,18 +2,18 @@ package su.nosite.smth.quizapp.quiz;
 
 import java.util.ArrayList;
 
-class AnswersStandartMode {
-    private static AnswersStandartMode ourInstance;
+public class QuizSingletonAnswers {
+    private static QuizSingletonAnswers ourInstance;
     ArrayList<Boolean>answers;
 
-    static AnswersStandartMode getInstance() {
+    static QuizSingletonAnswers getInstance() {
         if(ourInstance==null){
-            ourInstance=new AnswersStandartMode();
+            ourInstance=new QuizSingletonAnswers();
             ourInstance.answers=new ArrayList<>();
         }
         return ourInstance;
     }
 
-    private AnswersStandartMode() {
+    private QuizSingletonAnswers() {
     }
 }

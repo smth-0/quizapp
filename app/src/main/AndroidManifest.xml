@@ -17,9 +17,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="su.nosite.smth.quizapp.quiz.StandartModeActivity" />
-        <activity android:name="su.nosite.smth.quizapp.RatingActivity"/>
-        <activity android:name="su.nosite.smth.quizapp.quiz.QuizStandartActivity" />
+        <activity android:name="su.nosite.smth.quizapp.quiz.EnteringToQuizActivity" />
+        <activity android:name="su.nosite.smth.quizapp.quiz.QuizActivity" />
         <activity android:name="su.nosite.smth.quizapp.quiz.ResultActivity" />
         <activity android:name="su.nosite.smth.quizapp.quiz.AddQuestionActivity" />
     </application>

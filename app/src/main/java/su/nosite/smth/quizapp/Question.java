@@ -1,12 +1,13 @@
 package su.nosite.smth.quizapp;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by Mi Notebok on 11.03.2018.
  */
 
-public class Question implements Serializable{
+public class Question extends ArrayList<Question> implements Serializable{
     private String q="empty";
     private Boolean True=false;
 
