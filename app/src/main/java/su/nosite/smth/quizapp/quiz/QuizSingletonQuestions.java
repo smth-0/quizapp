@@ -1,7 +1,5 @@
 package su.nosite.smth.quizapp.quiz;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 import su.nosite.smth.quizapp.Question;
